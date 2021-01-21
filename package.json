@@ -1,0 +1,25 @@
+{
+  "name": "samy",
+  "version": "1.0.0",
+  "description": "bot for SA",
+  "main": "=",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "discord.js": "^12.5.1",
+    "googleapis": "^39.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "="
+  },
+  "author": "Jean Baumann",
+  "license": "ISC"
+}
