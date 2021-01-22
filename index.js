@@ -107,7 +107,7 @@ function getCells(auth, range, message) {
                 tmp = {data: []}
                 for(let i=0; i<values.length; i++){
                     if(values[i][j] == 'error') {
-                        message.channel.send("Vérifie la date (ne demande pas une date pdt le WE ;)")
+                        message.channel.send("Vérifie la date (On ne travaille pas le W-E voyons)")
                         return
                     }
                     values[i][j] && tmp.data.push(values[i][j])
