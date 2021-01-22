@@ -106,6 +106,10 @@ function getCells(auth, range, message) {
             for(let j=0; j<values[0].length; j++){
                 tmp = {data: []}
                 for(let i=0; i<values.length; i++){
+                    if(values[i][j] == 'error') {
+                        message.channel.send("Vérifie la date (ne demande pas une date pdt le WE ;)")
+                        return
+                    }
                     values[i][j] && tmp.data.push(values[i][j])
                     values[i][j] && (tmp.hour = j)
                 }
@@ -128,10 +132,10 @@ function getCells(auth, range, message) {
         console.log("Mon BOT est Connecté");
     })
 
-    columns = ['D', 'H', 'L', 'P', 'T']
-    hours = ['8h00', '10h20', '13h50', '16h10']
+const columns = ['D', 'H', 'L', 'P', 'T']
+const hours = ['8h00', '10h20', '13h50', '16h10']
 
-    const remapDate = (d, m) => {
+const remapDate = (d, m) => {
         /* compliqué de faire une simple relation mathématique*/
         console.log('jour ',d, 'mois ', m)
         res = 0
