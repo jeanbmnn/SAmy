@@ -4,9 +4,9 @@ const config = require("./config.json");
 
 exports.getRange = (start, Xoffset=0, Yoffset=2) => {
     /*calcule un intervalle de cellules: ('A3', (3,2) ) renvoir 'A3:E5'*/
-    const letter = start[0]
-    exports.charInc(letter, Xoffset)
     try{
+        const letter = start[0]
+        exports.charInc(letter, Xoffset)
         const index = start.slice(1)
         console.log(letter, index, start)
         console.log('getRange', start, Xoffset)
