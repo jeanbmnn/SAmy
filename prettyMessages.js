@@ -3,6 +3,8 @@ const Discord = require('discord.js');
 
 const randomColor = () => Math.floor(Math.random()*16777215).toString(16);
 
+const hours = ['8h00', '10h20', '13h50', '16h10']
+
 
 exports.prettyMsg = (course, teacher, zoom, hour) => new Discord.MessageEmbed()
 .setColor('#'+randomColor())
