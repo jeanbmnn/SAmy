@@ -1,4 +1,4 @@
-const config = require("./config.json");
+let config = require("./config.json");
 const Discord = require('discord.js');
 
 const randomColor = () => Math.floor(Math.random()*16777215).toString(16);
