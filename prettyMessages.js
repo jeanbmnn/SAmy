@@ -41,7 +41,11 @@ exports.help = () => new Discord.MessageEmbed()
         { name: 'Supprimer un lien zoom', value: 's!delete zoom [initiales prof.]', inline: true },
     )
 
-exports.prettyZooms = () => new Discord.MessageEmbed()
+exports.prettyZooms = () => {
+    delete require.cache[require.resolve('./config.json')]   // Deleting loaded module
+    config = require("./config.json")
+    new Discord.MessageEmbed()
     .setColor('#'+randomColor())
     .setTitle('Zooms recensés')
     .addFields(Object.keys(config.zooms).map((item, i) => new Object({name: config.teachers[item]? config.teachers[item]: item, value:config.zooms[item]})))
+}
