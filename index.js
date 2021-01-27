@@ -120,8 +120,13 @@ function getCells(auth, range, message) {
             let mess = coursePerHour.map((hour) => utils.formatCell(utils.parseCell(hour.data, hour.hour)))
             console.log("messages:", mess.flat())
             for(let i=0; i<mess.flat().length; i++){
-                message.channel.send(mess.flat()[i])
+                try{
+                    message.channel.send(mess.flat()[i])
+                }except{
+                    message.channel.send('Un problème est survenu')
+                }
             }
+
         }else{
 
         }});
