@@ -122,7 +122,7 @@ function getCells(auth, range, message) {
             for(let i=0; i<mess.flat().length; i++){
                 try{
                     message.channel.send(mess.flat()[i])
-                }except{
+                }catch{
                     message.channel.send('Un problème est survenu')
                 }
             }
