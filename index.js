@@ -141,16 +141,15 @@ const columns = ['D', 'H', 'L', 'P', 'T']
 const hours = ['8h00', '10h20', '13h50', '16h10']
 
 const remapDate = (d, m) => {
-        /* compliqué de faire une simple relation mathématique*/
-        console.log('jour ',d, 'mois ', m)
-        res = 0
-        if(m === 0){//janvier
-            if(d<=23) res = 0
-            else res = 1
-        }else if (m === 1) {// février: 28 jours et lundi est le 1 c'est fort pratique
-        res = parseInt(d/7)+1+2 // division par 7 pour avoir le numéro de semaine
-        //dans le mois, +1 pour que ce soit de 1 à 4 et non 0 à 3; +2 pcq il y a eu deux semaines avant fevrier
-
+    /* compliqué de faire une simple relation mathématique*/
+    console.log('jour ',d, 'mois ', m)
+    res = 0
+    if(m === 0){//janvier
+        if(d<=23) res = 0
+        else res = 1
+    }else if (m === 1) {// février: 28 jours et lundi est le 1 c'est fort pratique
+        res = parseInt(d/7)+2 // division par 7 pour avoir le numéro de semaine
+    //dans le mois, +1 pour que ce soit de 1 à 4 et non 0 à 3; +2 pcq il y a eu deux semaines avant fevrier
     }else if (m===2) {
         res = parseInt(d/7)+1+2+3-2/3 //-2/3 car il y a un décalage des rangées à cause des vacances
     }
